@@ -8,3 +8,7 @@ class Category(models.Model):
     slug = models.SlugField(unique=True)
 
     added_at = models.DateTimeField(auto_now_add=True)
+
+    
+    def __str__(self):
+        return f"{str(self.title)}"

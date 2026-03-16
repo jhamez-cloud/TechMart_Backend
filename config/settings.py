@@ -136,9 +136,36 @@ UNFOLD = {
         "show_all_applications": False,  # Dropdown with all applications and models
         "navigation": [
             {
+                "title": _("Navigation"),
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title":_("Dashboard"),
+                        "icon": "dashboard",
+                        "link":reverse_lazy("admin:categories_category_changelist"),
+                    },
+                    {
+                        "title":_("Categories"),
+                        "icon": "category",
+                        "link":reverse_lazy("admin:categories_category_changelist"),
+                    },
+                    {
+                        "title":_("Brands"),
+                        "icon": "robot",
+                        "link":reverse_lazy("admin:brands_brand_changelist"),
+                    },
+                    {
+                        "title":_("Products"),
+                        "icon": "work",
+                        "link":reverse_lazy("admin:products_product_changelist"),
+                    },
+                ]
+            },
+            {
                 "title": _("Administrators Control"),
                 "separator": True,  # Top border
-                "collapsible": True,  # Collapsible group of links
+                "collapsible": False,  # Collapsible group of links
                 "items": [
                     {
                         "title": _("Users"),

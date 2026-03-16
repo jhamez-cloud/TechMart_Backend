@@ -14,3 +14,6 @@ class Brand(models.Model):
     title = models.CharField(max_length=100,default='Samsung')
     brand_type = models.CharField(choices=BrandType.choices)
     slug = models.SlugField(unique=True)
+
+    def __str__(self):
+        return f"{str(self.title)}"

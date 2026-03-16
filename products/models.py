@@ -14,7 +14,8 @@ class Product(models.Model):
         UK_USED = "uk used","UK Used"
         US_USED = "us used","US Used"
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,default='Samsung Galaxy X6')
+    slug = models.SlugField(unique=True,default='Samsung-Galaxy-X6')
     #issue:install pillow // image = models.ImageField(upload_to='images/')
     price = models.FloatField(null=True)
     just_in = models.BooleanField(null=True)

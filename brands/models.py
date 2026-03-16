@@ -11,6 +11,6 @@ class Brand(models.Model):
         PHONE = "phone","Phone"
         ACCESSORY = "accessory","Accessory"
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100,default='Samsung')
     brand_type = models.CharField(choices=BrandType.choices)
     slug = models.SlugField(unique=True)

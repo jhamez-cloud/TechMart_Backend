@@ -44,12 +44,12 @@
         },
         "django-unfold": {
             "hashes": [
-                "sha256:0d90264fd399ae54d3f63e9d0a8d2dea003de479e417e88f274473f78713c253",
-                "sha256:d3920e0d98e72bbdcb0698e4307dc35cf6ffab55b92a6bdc6c20a79147df3472"
+                "sha256:061d8d11bfe02c48f11d29f9c550dd097ee7d6bc301d79a28e497d3c08e16955",
+                "sha256:3c9365c2003a33b18d69cde8554f802961bfc14a3e692f93371aacfe95a15753"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.11' and python_version < '4.0'",
-            "version": "==0.82.0"
+            "version": "==0.84.0"
         },
         "djangorestframework": {
             "hashes": [
@@ -71,11 +71,11 @@
         },
         "pyjwt": {
             "hashes": [
-                "sha256:35f95c1f0fbe5d5ba6e43f00271c275f7a1a4db1dab27bf708073b75318ea623",
-                "sha256:94a6bde30eb5c8e04fee991062b534071fd1439ef58d2adc9ccb823e7bcd0469"
+                "sha256:28ca37c070cad8ba8cd9790cd940535d40274d22f80ab87f3ac6a713e6e8454c",
+                "sha256:c74a7a2adf861c04d002db713dd85f84beb242228e671280bf709d765b03672b"
             ],
             "markers": "python_version >= '3.9'",
-            "version": "==2.11.0"
+            "version": "==2.12.1"
         },
         "sqlparse": {
             "hashes": [

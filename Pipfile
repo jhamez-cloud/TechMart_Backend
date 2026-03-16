@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
-djangorestframework = "*"
 django-unfold = "*"
+djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 django-filter = "*"
 

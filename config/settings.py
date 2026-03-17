@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR,'static')
+]
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 #Unfold Settings
 UNFOLD = {
@@ -143,7 +150,8 @@ UNFOLD = {
                     {
                         "title":_("Dashboard"),
                         "icon": "dashboard",
-                        "link":reverse_lazy("admin:categories_category_changelist"),
+                        "link":reverse_lazy("admin:index"),
+                        "permission":lambda request:request.user.is_superuser,
                     },
                     {
                         "title":_("Categories"),
@@ -176,4 +184,5 @@ UNFOLD = {
             },
         ],
     },
+    "DASHBOARD_CALLBACK":"accounts.views.dashboard_callback",
 }

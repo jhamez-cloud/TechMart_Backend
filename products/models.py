@@ -16,7 +16,7 @@ class Product(models.Model):
 
     name = models.CharField(max_length=100,default='Samsung Galaxy X6')
     slug = models.SlugField(unique=True,default='Samsung-Galaxy-X6')
-    #issue:install pillow // image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='products/',null=True,blank=True)
     price = models.FloatField(null=True)
     just_in = models.BooleanField(null=True)
     free_gift = models.BooleanField(null=True)

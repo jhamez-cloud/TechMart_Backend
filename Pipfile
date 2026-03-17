@@ -9,6 +9,7 @@ django-unfold = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 django-filter = "*"
+pillow = "*"
 
 [dev-packages]
 

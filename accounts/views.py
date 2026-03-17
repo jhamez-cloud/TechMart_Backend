@@ -1,5 +1,4 @@
-from django.shortcuts import render
-
+'''Docstring for dashboard ui logic'''
 # Create your views here.
 def dashboard_callback(request,context):
     '''Dashboard Callbacck PLugin Data'''

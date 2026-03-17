@@ -40,3 +40,6 @@ class Product(models.Model):
     memory = models.IntegerField()
     ram = models.IntegerField()
     screen_size = models.FloatField()
+
+    def __str__(self):
+        return f"{str(self.name)}"

@@ -35,7 +35,7 @@ class Product(models.Model):
     brand = models.ForeignKey('brands.Brand',on_delete=models.CASCADE)
     condition = models.CharField(max_length=20,choices=ConditionChoices.choices)
     color = models.CharField(max_length=20)
-    gpu = models.CharField(max_length=50,null=True)
+    gpu = models.CharField(max_length=50,null=True,default="intel")
     #filter options - numbers
     memory = models.IntegerField()
     ram = models.IntegerField()

@@ -11,7 +11,7 @@ class ProductViewset(ModelViewSet):
     '''Documentation String'''
     permission_classes = [AllowAny]
 
-    queryset = Product.objects.all()
+    queryset = Product.objects.all().prefetch_related("variants","images")
     serializer_class = ProductSerializer
 
     filter_backends = [DjangoFilterBackend]

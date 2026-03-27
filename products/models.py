@@ -1,7 +1,7 @@
 '''Products and Variants Models'''
+import datetime
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
-import datetime
 
 # ------------------------------
 # Base Product
@@ -32,6 +32,10 @@ class Product(models.Model):
     just_in = models.BooleanField(default=False)
     free_gift = models.BooleanField(default=False)
     free_shipping = models.BooleanField(default=False)
+    shipping_fee = models.FloatField(null=True,blank=True)
+    best_selling = models.BooleanField(default=False)
+    newest = models.BooleanField(default=False)
+    popular = models.BooleanField(default=False)
 
     # Discount
     discount = models.BooleanField(default=False)

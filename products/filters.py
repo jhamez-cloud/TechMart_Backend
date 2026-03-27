@@ -17,9 +17,11 @@ class ProductFilter(django_filters.FilterSet):
     condition = django_filters.CharFilter(field_name='condition', lookup_expr='exact')
     category = django_filters.CharFilter(field_name='category__slug', lookup_expr='iexact')
     brand = django_filters.BaseInFilter(field_name='brand__slug', lookup_expr='in')
+    id = django_filters.NumberFilter(field_name='id')
+    best_selling = django_filters.BooleanFilter(field_name='best_selling')
 
     class Meta:
         '''Documentation String'''
         model = Product
         # ONLY put fields that exist directly on Product
-        fields = ['id', 'condition', 'category', 'brand']
+        fields = ['id', 'condition', 'category', 'brand','best_selling']

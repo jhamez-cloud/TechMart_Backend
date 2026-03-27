@@ -14,7 +14,7 @@ class ProductVariantInline(admin.TabularInline):
 class ProductAdmin(ModelAdmin):
     '''Documentation String'''
     inlines = [ProductVariantInline]
-    list_display = ('name','slug','category','brand','condition','discount_percentage')
+    list_display = ('name','slug','category','free_shipping','condition','discount_percentage')
     prepopulated_fields = {'slug': ('name',)}
     search_fields = ('name','brand__name','category__name')
     list_filter = ('category','brand','condition')

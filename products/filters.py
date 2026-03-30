@@ -18,6 +18,7 @@ class ProductFilter(django_filters.FilterSet):
     category = django_filters.CharFilter(field_name='category__slug', lookup_expr='iexact')
     brand = django_filters.BaseInFilter(field_name='brand__slug', lookup_expr='in')
     id = django_filters.NumberFilter(field_name='id')
+    id_in = django_filters.BaseInFilter(field_name='id',lookup_expr='in')
     best_selling = django_filters.BooleanFilter(field_name='best_selling')
 
     class Meta:

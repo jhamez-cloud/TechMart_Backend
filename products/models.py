@@ -76,7 +76,7 @@ class ProductVariant(models.Model):
     image = models.ImageField(upload_to='variants/', null=True, blank=True)
 
     def __str__(self):
-        return f"{self.product.name} - {self.color} {self.storage}/{self.ram}"
+        return f"{self.color} - {self.storage}/{self.ram}"
 
 
 # ------------------------------

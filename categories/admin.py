@@ -1,3 +1,4 @@
+'''Documentation String'''
 from unfold.admin import ModelAdmin
 from django.contrib import admin
 from .models import Category

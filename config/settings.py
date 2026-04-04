@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'categories',
     'products',
     'orders',
+    'users',
     'rest_framework',
     'corsheaders',
     'django_filters',
@@ -211,9 +212,19 @@ UNFOLD = {
                 "collapsible": False,  # Collapsible group of links
                 "items": [
                     {
+                        "title": _("Admins"),
+                        "icon": "admin_panel_settings",
+                        "link": reverse_lazy("admin:auth_user_changelist"),
+                    },
+                    {
                         "title": _("Users"),
                         "icon": "people",
-                        "link": reverse_lazy("admin:auth_user_changelist"),
+                        "link": reverse_lazy("admin:users_userprofile_changelist"),
+                    },
+                    {
+                        "title": _("Orders"),
+                        "icon": "shopping_cart",
+                        "link": reverse_lazy("admin:orders_order_changelist"),
                     },
                 ],
             },
